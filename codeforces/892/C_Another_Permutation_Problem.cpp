@@ -27,7 +27,7 @@ int main() {
             cost += static_cast<long long>(p[j]) * (j + 1);
         }
         
-        cout << cost -(n*n -n)<< endl;
+        cout << cost -(n*n  n)<< endl;
     }
 
     return 0;
