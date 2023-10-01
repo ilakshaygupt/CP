@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <numeric>
 #include <map>
+#include<bitset>
+#include<cmath>
 
 using namespace std;
 
@@ -12,11 +14,9 @@ typedef long double ld;
 
 #define MULTITEST
 void solve() {
-    long n,k,x;
-    cin>>n>>k>>x;
-    if((k*(k+1))  /2 > x or ((2*n-k+1)*k )/2 <x) cout<<"NO"<<endl;
-    else cout<<"YES"<<endl;
- 
+    int m,n;
+    cin>>m>>n;
+    
   
 }
 

@@ -7,17 +7,31 @@
 
 using namespace std;
 
-typedef long long ll;
-typedef long double ld;
+
+
 
 #define MULTITEST
 void solve() {
-    long n,k,x;
-    cin>>n>>k>>x;
-    if((k*(k+1))  /2 > x or ((2*n-k+1)*k )/2 <x) cout<<"NO"<<endl;
-    else cout<<"YES"<<endl;
- 
   
+		long long n,m,k;
+		cin>>n>>m>>k;
+        
+
+		vector<long long>a(n);
+        vector<long long>b(m);
+        for(long long i=0;i<n;i++) cin>>a[i];
+		for(long long i=0;i<m;i++) cin>>b[i];
+		sort(a.begin(),a.end());
+		sort(b.begin(),b.end());
+		if(a[0]<b.back()) swap(a[0],b.back());
+		sort(a.begin(),a.end());
+		sort(b.begin(),b.end());
+		if(k%2==0) if(b[0]<a.back()) swap(b[0],a.back());
+		long long sum=0;
+		for(long long x=0;x<n;x++)
+		sum+=a[x];
+		cout<<sum<<endl;
+ 
 }
 
 int32_t main() {

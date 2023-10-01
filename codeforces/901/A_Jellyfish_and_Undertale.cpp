@@ -12,11 +12,24 @@ typedef long double ld;
 
 #define MULTITEST
 void solve() {
-    long n,k,x;
-    cin>>n>>k>>x;
-    if((k*(k+1))  /2 > x or ((2*n-k+1)*k )/2 <x) cout<<"NO"<<endl;
-    else cout<<"YES"<<endl;
- 
+    long long maxsec,start,n;
+    cin>>maxsec>>start>>n;
+    vector<long long> arr(n);
+    for(long long i=0;i<n;i++)  cin>>arr[i];
+    long long ans=0;
+
+    if(start!=1)
+    {
+        ans+=(start-1);
+        start=1;
+    }
+    for(long long i=0;i<n;i++)
+    {
+       ans+=min(maxsec,arr[i]+start)-1;
+       start=1;
+
+    }
+    cout<<ans+1<<endl;
   
 }
 
