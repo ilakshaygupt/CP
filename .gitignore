@@ -1,2 +1,4 @@
 *.bin
 codeforces/.cph/
+.vscode/
+.cph/
